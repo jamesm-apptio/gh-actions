@@ -19,6 +19,9 @@ jobs:
         run: npm test
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./react-app
     steps:
       - name: Fetch Code
         uses: actions/checkout@v3
